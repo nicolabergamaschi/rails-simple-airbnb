@@ -1,0 +1,14 @@
+<div class="form-wrapper">
+  <div class="form-new">
+    <h2>New flat</h2>
+    <%= simple_form_for @flat do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :description %>
+      <%= f.input :number_of_guests %>
+      <%= f.input :price_per_night %>
+      <button class="btn btn-primary"><%= f.button :submit %></button>
+      <button class="btn btn-danger"> <%= link_to "Cancel", flats_path %></button>
+    <% end %>
+  </div>
+</div>

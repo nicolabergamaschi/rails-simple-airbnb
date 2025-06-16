@@ -1,0 +1,21 @@
+<div class="card-wrapper">
+  <% @flats.each do |flat| %>
+    <div class="card bg-light border-secondary mb-3" style="width: 18rem;">
+      <div class="card-body">
+        <div class="card-info bg-light" >
+          <h5 class="card-title bg-light"> <%= truncate(flat.description, length: 200) %></h5>
+          <h6 class="card-subtitle bg-light mb-2 text-muted"> <%= flat.address %></h6>
+        </div>
+        <div class="card-icons-div">
+          <h6> <i class="fa-solid fa-users"></i> <%= flat.number_of_guests %></h6>
+          <h6> <i class="fa-solid fa-euro-sign"></i> <%= flat.price_per_night %></h6>
+        </div>
+        <div class="card-options" style="display: flex; flex-direction: row; gap: 10px; justify-content: center;">
+          <div><h6><%= link_to "More Info", flat_path(flat), class:"text-primary text-decoration-none" %></h6></div>
+          <div><h6><%= link_to "Edit", edit_flat_path(flat), class:"text-warning text-decoration-none" %></h6></div>
+          <div><h6><%= link_to "Remove", flat_path(flat), class:"text-danger text-decoration-none", data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></h6></div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

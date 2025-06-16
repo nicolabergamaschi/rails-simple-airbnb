@@ -1,0 +1,24 @@
+<div class="banner">
+  <img class="banner-img" src="https://developers.google.com/static/maps/images/landing/hero_maps_static_api_720.png" alt="flat-image">
+</div>
+<div class="show-page">
+  <div class="info-wrapper p-3">
+    <div class="info">
+      <div class="bg-light shadow rounded p-3 name">
+        <h5><%= @flat.name %></h5>
+        <h6 class="text-muted"><%= @flat.address %></h6>
+      </div>
+      <div class="bg-light shadow rounded p-3 description">
+        <%= @flat.description %>
+      </div>
+      <div class="bg-light shadow rounded p-3 details">
+        <h6>Details</h6>
+          <div class="card-icons-div">
+            <h6> <i class="fa-solid fa-users"></i> <%= @flat.number_of_guests %></h6>
+            <h6> <i class="fa-solid fa-euro-sign"></i> <%= @flat.price_per_night %></h6>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>
